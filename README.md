@@ -4,7 +4,13 @@ Paper: https://arxiv.org/abs/2007.14472
 
 # Code
 Please have a look at the ArtLabel.ipynb notebook, which contains all the code you need.
+at the ArtLabel.ipynb notebook,there is a bug in code block "collect ves branch length" ,"from hr_utils import nodeconnection, matchvestype, nodedist, edgemap".Actually 'edgemap'can't be imported from 'hr_utils'
 
+there  is a bug in code block'refinement using HR'. 
+'''center_node_pred = findmaxprob(graph,nodestart[0],visited,center_node_type,
+                                               len(edgefromnode[center_node_type]), exp_edge_type, 
+                                               probnodes,branch_dist_mean,branch_dist_std, majornode=True)'''
+  The order of the parameters is inconsistent with the order of the parameters in the function declaration.
 # Data
 The 729 scans come from five datasets: Anzhen, ArizonaCheck, BRAVE, CROPCheck, Parkinson2TPCheck
 Each graph is constructed from one set of intracranial artery traces (from iCafe) and saved in the pickle format under graph/graphsim/dataset_name
@@ -29,4 +35,3 @@ conda install tensorflow-gpu==1.15.0 jupyter nb_conda
 pip install graph_nets matplotlib scipy "tensorflow>=1.15,<2" "dm-sonnet<2" "tensorflow_probability<0.9"
 conda install keras
 
-# 
