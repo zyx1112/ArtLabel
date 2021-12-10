@@ -18,3 +18,15 @@ http://icafe.clatfd.cn/
 If you are using your own artery traces, please construct the graph accordingly to the format we used in the pickle files before running our code.
 Please refer to the notebook of "Generate graph.ipynb" for more information about the data format and the code for generating graphs. 
 Please make modifications accordingly based on your own data. 
+
+# environment
+tensorflow-pu=1.15.0 + keras=2.3.1 
+using the following codes to establish the required environment:
+
+conda create --name gnn
+activate gnn
+conda install tensorflow-gpu==1.15.0 jupyter nb_conda
+pip install graph_nets matplotlib scipy "tensorflow>=1.15,<2" "dm-sonnet<2" "tensorflow_probability<0.9"
+conda install keras
+
+# 
