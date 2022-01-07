@@ -3,7 +3,6 @@ import numpy as np
 from graph_nets import graphs
 from graph_nets import utils_np
 from graph_nets import utils_tf
-from graph_nets.demos import models
 import collections
 import networkx as nx
 from collections import Counter
